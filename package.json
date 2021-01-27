@@ -9,7 +9,8 @@
   "scripts": {
     "client": "npm start --prefix client",
     "Backend": "npm start --prefix Backend",
-    "start": "concurrently \"npm run client\" \"npm run Backend\""
+    "start": "concurrently \"npm run client\" \"npm run Backend\"",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
