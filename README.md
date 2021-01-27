@@ -1,11 +1,11 @@
 # Portfolio App
 
-This project is about to make a dynamic portfolio that it represente our : 
-(skills, experience, education, certifications)add we can add new project dynamicly without edit our code.
+This project is a dynamic portfolio to represent (skills, experience, education, certifications, publications)
+and we can add new project dynamicly using MERN Full Stack.
 
 ## How to run it 
 
- *  After you clone the project, you should run in the terminal in you main folder:
+ *  After you clone the project, you should run in the terminal in the main folder:
 
     ### `npm install`
 
