@@ -22,8 +22,13 @@ app.use(express.json())
 //include body-parser
 app.use(bodyparser.urlencoded({extended:true}))
 
-/** static file **/
-app.use(express.static(path.join(__dirname,'public')))
+// /** static file **/
+ app.use(express.static(path.join(__dirname,'public')))
+
+// ... other app.use middleware 
+//app.use(express.static(path.join(__dirname, "client", "build")))
+
+// ...
 
 
 /************************ Api Routes ***************/
@@ -38,6 +43,10 @@ app.use('/api/v3/', require('./Routes/articleRoutes'))
 // api/vi3/ for article routes
 app.use('/api/v4', userRoutes)
 /***************************************/
+// Right before your app.listen(), add this:
+//app.get("*", (req, res) => {
+//    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+//});
 
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode at port: ${PORT}`.yellow.bold))
