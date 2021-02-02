@@ -1,4 +1,4 @@
-import {createContext} from "react";
+import { createContext } from "react";
 
 const ArticleContext = createContext();
 export default ArticleContext;

@@ -13,16 +13,16 @@ export const ProjectReducer = (state, action) => {
       // console.log("action: ",action.payload)
       return {
         ...state,
-        
+
         projects: action.payload,
       };
     case ADD_PROJECT:
       return {
         ...state,
         projects: [action.payload, ...state.projects],
-        isLoading: false,//updated to false
-        addSuccess:action.success,//updated 
-        showSpinner:false , 
+        isLoading: false, //updated to false
+        addSuccess: action.success, //updated
+        showSpinner: false,
       };
     case GET_PROJECT_DETAILS:
       // console.log("Payload : ",action.payload)
@@ -43,18 +43,17 @@ export const ProjectReducer = (state, action) => {
       return {
         ...state,
         error: action.payload,
-        isLoading:false,//updated to true
-        addSuccess:action.success, //updated
-        showSpinner:false ,
+        isLoading: false, //updated to true
+        addSuccess: action.success, //updated
+        showSpinner: false,
       };
 
     case SHOW_SPINNER:
-      console.log('show spinner reducer');
-       return{
-          ...state,
-          showSpinner:true,
-       }
-
+      console.log("show spinner reducer");
+      return {
+        ...state,
+        showSpinner: true,
+      };
 
     default: {
       return state;

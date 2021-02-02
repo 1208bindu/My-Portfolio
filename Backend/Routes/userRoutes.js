@@ -1,20 +1,13 @@
-const Router = require('express').Router(); 
-const UserController = require('../controller/userController')
-const { addUserValidator } = require('../middleware/userMiddleware')
+const Router = require("express").Router();
+const UserController = require("../controller/userController");
+const { addUserValidator } = require("../middleware/userMiddleware");
 
+Router.route("/user")
+  .post(addUserValidator, UserController.addUserDetails)
+  .get(UserController.getUserDetails);
 
-Router
-    .route('/user')
-        .post( addUserValidator ,UserController.addUserDetails)
-        .get(UserController.getUserDetails)
+Router.route("/login").post(UserController.userLogin);
 
+Router.route("/valid").post(UserController.isTokenValid);
 
-Router 
-    .route('/login')
-        .post(UserController.userLogin)
-
-Router 
-    .route('/valid')
-        .post(UserController.isTokenValid)
-    
 module.exports = Router;

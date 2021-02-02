@@ -1,4 +1,4 @@
-const Article = require('../Models/articleModel');
+const Article = require("../Models/articleModel");
 
 // @Desc Get all articls
 exports.getArticles = async (req, res) => {
@@ -19,26 +19,25 @@ exports.getArticles = async (req, res) => {
 
 // @des add new post
 
-exports.new = async(req, res)=>{
-    try {
-      console.log("reqBody: ",req.body)
-        const article = new Article();
-        article.title = req.body.title;
-        article.content = req.body.content;
-        await article.save();
+exports.new = async (req, res) => {
+  try {
+    console.log("reqBody: ", req.body);
+    const article = new Article();
+    article.title = req.body.title;
+    article.content = req.body.content;
+    await article.save();
 
-        return res.status(201).json({
-            success: true,
-            data: article
-        })
-    } catch (error) {
-        res.status(500).json({
-            success: false,
-            err: error.message
-        })
-    }
-}
-
+    return res.status(201).json({
+      success: true,
+      data: article,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      err: error.message,
+    });
+  }
+};
 
 //@des View artcle
 exports.view = async (req, res) => {
@@ -59,15 +58,12 @@ exports.view = async (req, res) => {
     });
   } catch (error) {
     // Error condtion
-     return res.status(500).json({
+    return res.status(500).json({
       success: false,
       err: "Server error: " + error.message,
     });
   }
 };
-
-
-
 
 // @des delete  article
 exports.delete = async function (req, res) {
@@ -86,11 +82,10 @@ exports.delete = async function (req, res) {
       });
     });
   } catch (error) {
-      res.json({
-        err: error.message,
-        success:false
-        // message: "something worng!"
-      });
-    
+    res.json({
+      err: error.message,
+      success: false,
+      // message: "something worng!"
+    });
   }
 };

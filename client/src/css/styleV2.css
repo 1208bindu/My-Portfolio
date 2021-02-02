@@ -1,307 +1,279 @@
-
-
-
-
-
-
-
-
-
-
-
 /**********  Resume PAGE ***********/
 
-
 /* FORM */
-.resume-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:20px !important;
-    width: 100%;
+.resume-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px !important;
+  width: 100%;
 }
 
-.file-field input{
+.file-field input {
   width: 40% !important;
 }
 /* PDF FILE */
-.react-pdf__Page__canvas{
-    margin:0px !important;
-    
+.react-pdf__Page__canvas {
+  margin: 0px !important;
 }
 
-.disable{
-  color:rgb(31, 29, 29);
+.disable {
+  color: rgb(31, 29, 29);
   background-color: darkgray;
-  padding:2% 3% !important;
- 
- font-size:1em;
- border-radius: 7px;
- pointer-events: none;
+  padding: 2% 3% !important;
+
+  font-size: 1em;
+  border-radius: 7px;
+  pointer-events: none;
 }
 
-.enable{
- padding:2% 3% !important;
- color:white;
- background-color:rgb(44, 46, 99);
- font-size:1em;
- border-radius: 7px;
- cursor: pointer;
+.enable {
+  padding: 2% 3% !important;
+  color: white;
+  background-color: rgb(44, 46, 99);
+  font-size: 1em;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
-@media (max-width: 540px){
-  #eng, #norsk{
-    font-size:0.7em;
-   }
+@media (max-width: 540px) {
+  #eng,
+  #norsk {
+    font-size: 0.7em;
   }
+}
 
-
-
-.Resume{
+.Resume {
   max-width: 85% !important;
-  margin-top:5%;
+  margin-top: 5%;
 }
-.pdf-warper{
-    position: relative;
-    overflow: hidden !important;
-    width: 100%;
-    
+.pdf-warper {
+  position: relative;
+  overflow: hidden !important;
+  width: 100%;
 }
 
-.resume-btn-box{
+.resume-btn-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 
-    display: flex;
-   justify-content: flex-end;
-   align-items: flex-start;
-   
-    padding:5%;
-    width:8%;
+  padding: 5%;
+  width: 8%;
 }
-.resume-btn-box button, .resume-btn-box .btn{
-        margin-left: 5%;
-        margin-right: 5%;
-        background-color:rgb(44, 46, 99) !important;
+.resume-btn-box button,
+.resume-btn-box .btn {
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: rgb(44, 46, 99) !important;
 }
 /**************************************************/
 
-
 /**********  Add New Project PAGE ***********/
 
-.addProjectForm input,.addProjectForm textarea{
-    border:1px solid #005eed !important;
-    border-radius: 10px !important;
-    margin-top: 10px;
-     padding-left: 20px !important;
-     width:90% !important;
+.addProjectForm input,
+.addProjectForm textarea {
+  border: 1px solid #005eed !important;
+  border-radius: 10px !important;
+  margin-top: 10px;
+  padding-left: 20px !important;
+  width: 90% !important;
 }
-.addProjectForm textarea{
-    padding:15px !important;
-    width: 94% !important;
-    row-gap: 30px !important;
+.addProjectForm textarea {
+  padding: 15px !important;
+  width: 94% !important;
+  row-gap: 30px !important;
 }
 
 /* INPUT Styling */
 
-#desLabel{
-    
-    margin-top:8px !important;
-    margin-left: 10px !important;
+#desLabel {
+  margin-top: 8px !important;
+  margin-left: 10px !important;
 }
-  /* label color */
-  .input-field label {
-    color: #005eed !important;
-    padding-left: 6.6% !important;
+/* label color */
+.input-field label {
+  color: #005eed !important;
+  padding-left: 6.6% !important;
+}
 
-    }
+/* valid color */
+.input-field input.valid,
+.input-field textarea.valid {
+  border: 1px solid rgb(8, 180, 59) !important;
+  box-shadow: 0 1px 0 0 rgb(8, 180, 59) !important;
+}
+/* invalid color */
+.input-field input.invalid,
+.input-field textarea.invalid {
+  border: 1px solid rgb(255, 23, 73) !important;
+  box-shadow: 0 1px 0 0 rgb(255, 23, 73) !important;
+}
+.input-field input.invalid + label,
+.input-field textarea.invalid + label {
+  color: rgb(255, 23, 73) !important;
+  background-color: transparent;
+}
+.input-field input.valid + label,
+.input-field textarea.valid + label {
+  color: rgb(8, 180, 59) !important;
+}
 
-  /* valid color */
-  .input-field input.valid ,.input-field textarea.valid {
-    border: 1px solid rgb(8, 180, 59) !important;
-    box-shadow: 0 1px 0 0 rgb(8, 180, 59) !important;
-  }
-  /* invalid color */
-  .input-field input.invalid,.input-field textarea.invalid {
-    border: 1px solid rgb(255, 23, 73) !important;
-    box-shadow: 0 1px 0 0 rgb(255, 23, 73) !important;
-  }
-  .input-field input.invalid +label ,.input-field textarea.invalid +label {
-   color:rgb(255, 23, 73) !important;
-   background-color: transparent;
-  }
-  .input-field input.valid +label ,.input-field textarea.valid +label {
-   color:rgb(8, 180, 59) !important;
-  }
+.file-path-wrapper {
+  padding-left: 2px !important;
+  padding-right: 5px !important;
+}
 
-  .file-path-wrapper{
-      padding-left: 2px !important;
-      padding-right: 5px !important;
-      
-     
-      
-      
-  }
-  
 /**************************************************/
 
-
-
-
 /**********  About ***********/
-.About{
+.About {
   height: auto;
-  padding:0;
-  margin:40px;
+  padding: 0;
+  margin: 40px;
   width: 100%;
 }
-.sid-background{
-      background-image:linear-gradient(rgba(149, 149, 149, 0.061), rgba(39, 39, 39, 0.788)),
-       url("https://images.unsplash.com/photo-1597075095391-f15c2f9f359a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=635&q=80");
-       background-size: cover;
-       background-position: top;
-       background-repeat: no-repeat;
-       height:150vh ;
+.sid-background {
+  background-image: linear-gradient(
+      rgba(149, 149, 149, 0.061),
+      rgba(39, 39, 39, 0.788)
+    ),
+    url("https://images.unsplash.com/photo-1597075095391-f15c2f9f359a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=635&q=80");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 150vh;
 }
 
+.Box-education {
+  width: 100%;
+  padding: 0px;
 
- .Box-education{
-  width:100%;
-  padding:0px ;
-  
   font-size: 100%;
-  color:#fff;
+  color: #fff;
 }
-.Box-education li{
+.Box-education li {
   margin-top: 0px;
 }
-.Box-education  h2{
- 
+.Box-education h2 {
   text-align: center;
   margin: 0;
   padding: 20px;
   margin-bottom: 10px !important;
 }
 
-.Details{
-  color:#fff;
+.Details {
+  color: #fff;
 }
-.Details p{
- 
+.Details p {
   line-height: 1.8;
   width: 100%;
   text-align: justify;
-
 }
 
 /****** Education Experience Styling ******/
-.list li{
-    font-weight: 550;
-    margin-bottom:5px;
-    
+.list li {
+  font-weight: 550;
+  margin-bottom: 5px;
 }
 
-.list{
+.list {
   padding: 0px 5px !important;
-  color : rgb(32, 32, 32);
+  color: rgb(32, 32, 32);
   font-size: large;
   text-align: left;
-  width:90%;
-  margin:0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
-.list span{
+.list span {
   line-height: 1.2;
 }
-.list span{
+.list span {
   margin: 0px !important;
 }
 
-.list p{
-  margin:2px !important;
-  padding:8px 5px 20px 5px !important;
+.list p {
+  margin: 2px !important;
+  padding: 8px 5px 20px 5px !important;
 }
 
 /********* Skills List Styling ******/
-.list_skills li{
+.list_skills li {
   font-weight: 500;
-  margin-bottom:5px;
-  
+  margin-bottom: 5px;
 }
 
-.list_skills{
-padding: 0px 5px !important;
-color : rgb(32, 32, 32);
-font-size: large;
-text-align: center;
-width:90%;
-margin:0 auto;
+.list_skills {
+  padding: 0px 5px !important;
+  color: rgb(32, 32, 32);
+  font-size: large;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
-.list_skills span{
-line-height: 1.2;
+.list_skills span {
+  line-height: 1.2;
 }
-.list_skills span{
-margin: 0px !important;
+.list_skills span {
+  margin: 0px !important;
 }
 
-.list_skills p{
-  font-size:12px;
+.list_skills p {
+  font-size: 12px;
   text-align: justify;
 }
 
 .icon_holder {
-  width:95%;
-  padding:10%;
-  margin-top:15%;
+  width: 95%;
+  padding: 10%;
+  margin-top: 15%;
   display: flex;
 }
 .icon_holder img {
   width: 90%;
- 
 }
 
 /************************ Certificates *********************/
-.list_certificates p{
-  color:black;
+.list_certificates p {
+  color: black;
   font-weight: bold;
-  margin:2%;
+  margin: 2%;
 }
-.list_certificates img{
+.list_certificates img {
   width: 95%;
 }
 
-.list_certificates p:hover{
+.list_certificates p:hover {
   background-color: rgb(211, 205, 205);
   cursor: pointer;
 }
 
-
-#python, #R, #JS, #psbasic, #psinter{
+#python,
+#R,
+#JS,
+#psbasic,
+#psinter {
   display: none;
 }
 
-
-
-
-.about-content{
+.about-content {
   margin-left: 30px !important;
 }
 
-
-
 /* Login Page */
 
-.login-form  input{
-  border : 1px solid #263238 !important;
+.login-form input {
+  border: 1px solid #263238 !important;
   border-radius: 5px;
   height: 40px;
   padding-left: 30px !important;
 }
 
-
-.login-form  label{
-color:#263238 !important;
+.login-form label {
+  color: #263238 !important;
 }
 
-.login-form  input:focus{
-  border : 1px solid #263238 !important;
+.login-form input:focus {
+  border: 1px solid #263238 !important;
   box-shadow: none !important;
-
 }

@@ -1,12 +1,15 @@
 const mongoose = require("mongoose");
 
 const projectSchema = new mongoose.Schema({
-  
   name: { type: String, required: true, unique: true },
-  url: { type: String},
+  url: { type: String },
   source_code: { type: String, required: true },
   img_path: { type: String, required: true },
-  description: { type: String, required: true, maxlength: [300, "char shoude be 300"] },
+  description: {
+    type: String,
+    required: true,
+    maxlength: [300, "char shoude be 300"],
+  },
   created_at: { type: Date, default: Date.now },
 });
 
@@ -18,7 +21,7 @@ const projectSchema = new mongoose.Schema({
 //   Project.find(callback).limit(limit);
 // };
 
-// module.exports = mongoose.model("projects", projectSchema);   
+// module.exports = mongoose.model("projects", projectSchema);
 
 const Project = (module.exports = mongoose.model("project", projectSchema));
 module.exports.get = (callback, limit) => {
