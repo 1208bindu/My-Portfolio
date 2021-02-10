@@ -1,11 +1,16 @@
 # Portfolio App
 
+### The portfolio has been deployed using Heroku and the link for the same is:
+
+
+## https://portfolio-bindutrikha.herokuapp.com/
+
 This project is a dynamic portfolio to represent (skills, experience, education, certifications, publications)
 and we can add new project dynamicly using MERN Full Stack.
 
 ## How to run it 
 
- *  After you clone the project, you should run in the terminal in the main folder:
+ *  After you clone the project, go to 'cd backend'
 
     ### `npm install`
 
@@ -16,13 +21,7 @@ and we can add new project dynamicly using MERN Full Stack.
     ### `npm install`
 
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* In the main folder run the command:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-
-## DESING PATTREN
-
-**we are using: MVC Architect**
+  ### npm run dev
 
